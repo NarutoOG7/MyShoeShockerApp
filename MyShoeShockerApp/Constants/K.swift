@@ -11,6 +11,7 @@ struct K {
     
     struct CellIdentifiers {
         static let mainShoeCell = "MainShoeCell"
+        static let cartCell = "CartCell"
     }
     struct SegueIdentifiers {
         static let toDetailVC = "ToDetailsVC"

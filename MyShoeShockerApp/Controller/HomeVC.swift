@@ -12,6 +12,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var mainCollectionView: UICollectionView!
 
     var selectedShoe: Shoe?
+    var isHeartTapped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,9 @@ class HomeVC: UIViewController {
         self.performSegue(withIdentifier: K.SegueIdentifiers.toCartVC, sender: self)
     }
     
+        @IBAction func heartPressed(_ sender: UIButton) {
+            isHeartTapped = true
+        }
 
 }
 
@@ -39,6 +43,9 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainShoeCell", for: indexPath) as? MainShoeCell {
             let shoe = DataService.instance.getShoes()[indexPath.row]
             cell.updateViews(shoe: shoe)
+            if isHeartTapped == true {
+                DataService.instance.addShoeToCart(shoe: shoe)
+            }
             return cell
         } else {
             return MainShoeCell()

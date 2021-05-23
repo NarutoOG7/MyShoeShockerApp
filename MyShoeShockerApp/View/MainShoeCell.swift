@@ -22,7 +22,9 @@ class MainShoeCell: UICollectionViewCell {
         priceLabel.text = shoe.price
     }
     
-    @IBAction func heartPressed(_ sender: UIButton) {
-        // Add Shoe to Cart
-    }
+//    @IBAction func heartPressed(_ sender: UIButton) {
+//        // Add Shoe to Cart
+//        let shoe = DataService.instance.getShoes()
+//        DataService.Cart.addShoeToCart(shoe)
+//    }
 }

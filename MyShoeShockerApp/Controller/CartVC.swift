@@ -15,21 +15,33 @@ class CartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        cartTableView.dataSource = self
+        cartTableView.delegate = self
+        
+        cartTableView.estimatedRowHeight = 150
+        cartTableView.rowHeight = UITableView.automaticDimension
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func purchasePressed(_ sender: UIButton) {
         performSegue(withIdentifier: K.SegueIdentifiers.toReceiptVC, sender: self)
+    }
+    
+}
+
+extension CartVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataService.instance.getShoesInCart().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: K.CellIdentifiers.cartCell) as? CartCell {
+            let shoe = DataService.instance.getShoesInCart()[indexPath.row]
+            cell.updateViews(shoe: shoe)
+            return cell
+        } else {
+            return CartCell()
+        }
     }
     
 }
