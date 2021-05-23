@@ -21,4 +21,8 @@ class MainShoeCell: UICollectionViewCell {
         modelLabel.text = shoe.model
         priceLabel.text = shoe.price
     }
+    
+    @IBAction func heartPressed(_ sender: UIButton) {
+        // Add Shoe to Cart
+    }
 }
