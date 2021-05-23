@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		C99984A3265985DE00645069 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984A2265985DE00645069 /* AppDelegate.swift */; };
 		C99984A5265985DE00645069 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984A4265985DE00645069 /* SceneDelegate.swift */; };
-		C99984A7265985DE00645069 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984A6265985DE00645069 /* ViewController.swift */; };
+		C99984A7265985DE00645069 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984A6265985DE00645069 /* HomeVC.swift */; };
 		C99984AA265985DE00645069 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99984A8265985DE00645069 /* Main.storyboard */; };
 		C99984AC265985E200645069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C99984AB265985E200645069 /* Assets.xcassets */; };
 		C99984AF265985E200645069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C99984AD265985E200645069 /* LaunchScreen.storyboard */; };
+		C99984B92659926B00645069 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984B82659926B00645069 /* K.swift */; };
+		C99984C32659944C00645069 /* MainShoeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984C22659944C00645069 /* MainShoeCell.swift */; };
+		C99984C6265995BD00645069 /* Shoe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984C5265995BD00645069 /* Shoe.swift */; };
+		C99984C9265996F400645069 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99984C8265996F400645069 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C999849F265985DE00645069 /* MyShoeShockerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyShoeShockerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99984A2265985DE00645069 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C99984A4265985DE00645069 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C99984A6265985DE00645069 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C99984A6265985DE00645069 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C99984A9265985DE00645069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C99984AB265985E200645069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C99984AE265985E200645069 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C99984B0265985E200645069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C99984B82659926B00645069 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		C99984C22659944C00645069 /* MainShoeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainShoeCell.swift; sourceTree = "<group>"; };
+		C99984C5265995BD00645069 /* Shoe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shoe.swift; sourceTree = "<group>"; };
+		C99984C8265996F400645069 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		C99984A1265985DE00645069 /* MyShoeShockerApp */ = {
 			isa = PBXGroup;
 			children = (
+				C99984C0265993F100645069 /* Services */,
+				C99984BF265993EC00645069 /* Model */,
+				C99984BE265993E500645069 /* View */,
+				C99984BD265993DA00645069 /* Controller */,
+				C99984B72659924C00645069 /* Constants */,
 				C99984A2265985DE00645069 /* AppDelegate.swift */,
 				C99984A4265985DE00645069 /* SceneDelegate.swift */,
-				C99984A6265985DE00645069 /* ViewController.swift */,
 				C99984A8265985DE00645069 /* Main.storyboard */,
 				C99984AB265985E200645069 /* Assets.xcassets */,
 				C99984AD265985E200645069 /* LaunchScreen.storyboard */,
 				C99984B0265985E200645069 /* Info.plist */,
 			);
 			path = MyShoeShockerApp;
+			sourceTree = "<group>";
+		};
+		C99984B72659924C00645069 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C99984B82659926B00645069 /* K.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C99984BD265993DA00645069 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C99984A6265985DE00645069 /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C99984BE265993E500645069 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C99984C22659944C00645069 /* MainShoeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C99984BF265993EC00645069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C99984C5265995BD00645069 /* Shoe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C99984C0265993F100645069 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C99984C8265996F400645069 /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99984A7265985DE00645069 /* ViewController.swift in Sources */,
+				C99984C6265995BD00645069 /* Shoe.swift in Sources */,
+				C99984C9265996F400645069 /* DataService.swift in Sources */,
+				C99984A7265985DE00645069 /* HomeVC.swift in Sources */,
+				C99984B92659926B00645069 /* K.swift in Sources */,
+				C99984C32659944C00645069 /* MainShoeCell.swift in Sources */,
 				C99984A3265985DE00645069 /* AppDelegate.swift in Sources */,
 				C99984A5265985DE00645069 /* SceneDelegate.swift in Sources */,
 			);
